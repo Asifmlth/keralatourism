@@ -1,0 +1,63 @@
+form label
+{
+    position: relative;
+    display: block;
+}
+form input
+{
+    margin: 10px 0;
+    width: 100%;
+    background: wheat;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    
+    
+}
+.emailText,
+.passText,
+.repassText,
+.mobileText
+{
+font-weight: 300;
+font-style: italic;
+padding: 5px;
+}
+label.valid .emailText,
+label.valid .passText,
+label.valid .repassText,
+label.valid .mobileText
+
+{
+    color: green;
+
+}
+label.invalid .emailText,
+label.invalid .passText,
+label.invalid .repassText,
+label.invalid .mobileText
+
+{
+    color: red;
+
+}
+label.valid::before,
+label.invalid::before
+{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    right: 5px;
+    z-index: 100;
+}
+label.valid::before
+{
+    background: url(check.svg) no-repeat center /cover;
+}
+label.invalid::before
+{
+    background: url(error.png) no-repeat center /cover;
+}
